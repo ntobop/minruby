@@ -3,7 +3,7 @@
 
 ## style 
 
-
+```
 https://www.ruby.or.jp/ja/tech/development/ruby/050_coding_rule.html
 
 インデント 幅は2とする
@@ -29,4 +29,4 @@ whileのdoは省略する。また、while !xのような場合は、 until xに
 ファイル名は、すべて小文字とし、単語の区切りに`-'を用いる
 
 https://qiita.com/na-777/items/b33e965e079b1f3c62b3
-
+```
