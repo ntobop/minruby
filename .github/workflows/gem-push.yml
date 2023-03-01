@@ -10,17 +10,22 @@ jobs:
   build:
     name: Build + Publish
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
+    
+    strategy:
+      matrix:
+        ruby-version: ['2.6', '2.7', '3.0']
 
     steps:
     - uses: actions/checkout@v3
-    - name: Install Ruby and gems
-      uses: ruby/setup-ruby@ee2113536afb7f793eed4ce60e8d3b26db912da4 # v1.127.0
-      with:
-        bundler-cache: true
+    - name: Set up Ruby
 
+    - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: ${{ matrix.ruby-version }}
+        bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+        
+    - name: Run tests
+      run: bundle exec rake
     - name: Security audit dependencies
       run: bin/bundler-audit --update
     - name: Security audit application code
