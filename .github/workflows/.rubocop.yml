@@ -1,8 +1,13 @@
 
 https://docs.rubocop.org/rubocop/cops_style.html
+https://gist.github.com/linyows/ace586b118f87291ed3e
 
 AllCops:
   NewCops: enable
 
 Layout/LineLength:
   Max: 120
+  
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
