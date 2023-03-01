@@ -5,6 +5,7 @@ AllCops:
     - 'pkg/**/*'
     - 'sig/**/*'
     - 'vendor/**/*'
+    - '*gemspec'
     
 #https://docs.rubocop.org/rubocop/cops_style.html
 #https://gist.github.com/linyows/ace586b118f87291ed3e
