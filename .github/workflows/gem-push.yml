@@ -41,7 +41,7 @@ jobs:
     - name: Lint Ruby files
       run: |
         gem install rubocop
-        rubocop --parallel
+        rubocop -c .rubocop.yml
 
     - name: Gem
       run: |
